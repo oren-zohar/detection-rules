@@ -1,0 +1,110 @@
+{
+      "action_data.id": [
+        "2a0a0966-9609-40f7-bda5-e4dade1db024"
+      ],
+      "elastic_agent.version": [
+        "7.14.0"
+      ],
+      "host.hostname": [
+        "kind-1w-1c-control-plane"
+      ],
+      "type": [
+        "kind-1w-1c-control-plane"
+      ],
+      "host.mac": [
+        "02:42:ac:14:00:03"
+      ],
+      "host.ip": [
+        "172.20.0.3",
+        "fc00:f853:ccd:e793::3",
+        "fe80::42:acff:fe14:3"
+      ],
+      "agent.type": [
+        "osquerybeat"
+      ],
+      "action_data.query": [
+        "select filename, mode, path, uid, gid from file where (path like \"/hostfs/etc/kubernetes/%\" AND filename IN ('scheduler.conf', 'controller-manager.conf', 'scheduler.conf', 'admin.conf', 'kubelet.conf')) OR (path like \"/hostfs/etc/kubernetes/manifests/%\" AND filename IN ('etcd.yaml', 'kube-apiserver.yaml', 'kube-controller-manager.yaml', 'kube-scheduler.yaml')) OR (path like \"/hostfs/etc/systemd/system/kubelet.service.d/%\" AND filename IN ('10-kubeadm.conf')) OR (path like \"/hostfs/var/lib/kubelet/%\" AND filename IN ('config.yaml')) OR (path like \"/hostfs/var/lib/etcd/\" AND type = 'directory') OR (path like \"/hostfs/etc/kubernetes/pki\" AND type = 'directory')"
+      ],
+      "action_id": [
+        "0db7e4e5-6453-442c-a440-16347e009f54"
+      ],
+      "host.os.version": [
+        "7 (Core)"
+      ],
+      "host.os.kernel": [
+        "5.10.25-linuxkit"
+      ],
+      "host.os.name": [
+        "CentOS Linux"
+      ],
+      "agent.name": [
+        "kind-1w-1c-control-plane"
+      ],
+      "osquery.gid": [
+        "0"
+      ],
+      "elastic_agent.snapshot": [
+        false
+      ],
+      "event.agent_id_status": [
+        "verified"
+      ],
+      "host.id": [
+        "bb43eb848699cf59adb70cc299cb4597"
+      ],
+      "host.os.type": [
+        "linux"
+      ],
+      "osquery.uid": [
+        "0"
+      ],
+      "elastic_agent.id": [
+        "c50d38a2-3258-499e-a3a7-b14f4c749c9d"
+      ],
+      "osquery.path": [
+        "/hostfs/etc/kubernetes/controller-manager.conf"
+      ],
+      "host.os.codename": [
+        "Core"
+      ],
+      "osquery.mode": [
+        "0600"
+      ],
+      "agent.hostname": [
+        "kind-1w-1c-control-plane"
+      ],
+      "osquery.filename": [
+        "controller-manager.conf"
+      ],
+      "host.architecture": [
+        "x86_64"
+      ],
+      "event.ingested": [
+        "2021-10-11T09:30:58.000Z"
+      ],
+      "@timestamp": [
+        "2021-10-11T09:30:56.132Z"
+      ],
+      "agent.id": [
+        "c50d38a2-3258-499e-a3a7-b14f4c749c9d"
+      ],
+      "host.containerized": [
+        true
+      ],
+      "host.os.platform": [
+        "centos"
+      ],
+      "ecs.version": [
+        "1.10.0"
+      ],
+      "agent.ephemeral_id": [
+        "d6426920-8d31-4287-8afd-9174ed0a74a5"
+      ],
+      "agent.version": [
+        "7.14.0"
+      ],
+      "host.os.family": [
+        "redhat"
+      ]
+    
+  }
