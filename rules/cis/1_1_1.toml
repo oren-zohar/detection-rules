@@ -1,0 +1,35 @@
+[metadata]
+creation_date = "2021/10/11"
+maturity = "development"
+updated_date = "2021/10/11"
+
+[rule]
+name = "1.1.1 Ensure that the API server pod specification file permissions are set to 644 or more restrictive"
+tags = [ "Elastic", "CIS" ]
+interval = "5m"
+enabled = true
+description = "Ensure that the API server pod specification file has permissions of 644 or more restrictive."
+risk_score = 21
+severity = "low"
+license = ""
+author = ["Elastic"]
+false_positives = []
+from = "now-360s"
+rule_id = "6036c20c-c200-42e7-ae5c-fac6a8f89e89"
+max_signals = 100
+risk_score_mapping = []
+severity_mapping = []
+threat = []
+to = "now"
+references = []
+exceptions_list = []
+type = "eql"
+language = "eql"
+index = [ "logs*",]
+query = '''
+any where osquery.filename == "kube-apiserver.yaml" and not osquery.mode regex ("0+(0|1|2|3|4|5|6)+(0|1|2|3|4)+(0|1|2|3|4)")
+'''
+filters = []
+throttle = "no_actions"
+actions = []
+timestamp_override = "event.ingested"
