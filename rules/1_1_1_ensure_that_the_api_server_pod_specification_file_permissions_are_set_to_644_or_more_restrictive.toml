@@ -1,0 +1,19 @@
+[metadata]
+creation_date = "2021/10/12"
+maturity = "development"
+updated_date = "2021/10/12"
+
+[rule]
+author = ["Elastic"]
+description = "Ensure that the API server pod specification file has permissions of 644 or more restrictive."
+language = "eql"
+name = "1.1.1 Ensure that the API server pod specification file permissions are set to 644 or more restrictive"
+risk_score = 21
+rule_id = "a35206f8-76ec-44d1-bd63-fc95cdd2bcea"
+severity = "low"
+type = "eql"
+
+query = '''
+any where osquery.filename == "kube-apiserver.yaml" and not osquery.mode regex ("0+(0|1|2|3|4|5|6)+(0|1|2|3|4)+(0|1|2|3|4)")
+'''
+
