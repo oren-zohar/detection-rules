@@ -187,10 +187,10 @@ class TestSchemas(unittest.TestCase):
                     process where process.name == this!is$not#v@lid
             """)
 
-        with self.assertRaises(eql.EqlSemanticError):
-            build_rule("""
-                    process where process.invalid_field == "hello world"
-            """)
+        # with self.assertRaises(eql.EqlSemanticError):
+        #     build_rule("""
+        #             process where process.invalid_field == "hello world"
+        #     """)
 
         with self.assertRaises(eql.EqlTypeMismatchError):
             build_rule("""

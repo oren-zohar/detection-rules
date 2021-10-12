@@ -183,7 +183,7 @@ class KqlSchema2Eql(eql.Schema):
 
     def __init__(self, kql_schema):
         self.kql_schema = kql_schema
-        eql.Schema.__init__(self, {}, allow_any=True, allow_generic=False, allow_missing=False)
+        eql.Schema.__init__(self, {}, allow_any=True, allow_generic=False, allow_missing=True)
 
     def validate_event_type(self, event_type):
         # allow all event types to fill in X:
